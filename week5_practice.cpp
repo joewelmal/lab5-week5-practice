@@ -79,5 +79,26 @@ int main() {
     // TODO (Part E): Use largerValue with two int values and with two double values.
     // Print each result with a descriptive English label.
 
+LimitedEvent limitedEvent("Robotics Workshop", 18);
+
+CampusEvent *event1 = &openEvent;
+CampusEvent *event2 = &limitedEvent;
+
+cout << "--- Polymorphism ---" << endl;
+
+event1->printDetails();
+event2->printDetails();
+
+cout << "--- Function template ---" << endl;
+
+int higherAttendance = largerValue(45, 80);
+double higherRating = largerValue(4.2, 4.7);
+
+cout << "Higher attendance estimate: "
+     << higherAttendance << endl;
+
+cout << "Higher event rating: "
+     << higherRating << endl;
+
     return 0;
 }
